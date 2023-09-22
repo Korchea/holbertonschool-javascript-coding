@@ -7,9 +7,9 @@ request(process.argv[2], function (error, response) {
   } else {
     const JsonBody = JSON.parse(response.body).results;
     let numOfMovies = 0;
-    for (const i in JsonBody) {
-      for (const j in JsonBody[i].characters) {
-        if (JsonBody[i].characters[j] === 'https://swapi-api.hbtn.io/api/people/18/') {
+    for (const i of JsonBody) {
+      for (const j of i.characters) {
+        if (j === 'https://swapi-api.hbtn.io/api/people/18/') {
           numOfMovies++;
         }
       }
