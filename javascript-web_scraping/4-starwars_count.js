@@ -9,7 +9,7 @@ request(process.argv[2], function (error, response) {
     let numOfMovies = 0;
     for (const i of JsonBody) {
       for (const j of i.characters) {
-        if (j.includes("18")) {
+        if (j.includes('18')) {
           numOfMovies++;
         }
       }
