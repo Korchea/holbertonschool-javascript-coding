@@ -17,7 +17,7 @@ request(process.argv[2], function (error, response) {
         comTask[user.userId]++;
       }
     }
-    for (let i = 0; i <= maxId; i++) {
+    for (let i = 1; i <= maxId; i++) {
       if (comTask[i] !== 0) {
         console.log(comTask);
         return;
